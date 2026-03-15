@@ -1,0 +1,285 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #f7f8fc;
+  font-family: Arial, sans-serif;
+  color: #1f2937;
+}
+
+a {
+  text-decoration: none;
+}
+
+.seller-app {
+  display: flex;
+  min-height: 100vh;
+}
+
+.seller-sidebar {
+  width: 260px;
+  background: #111827;
+  color: white;
+  padding: 24px 18px;
+  position: sticky;
+  top: 0;
+  min-height: 100vh;
+}
+
+.seller-logo h2 {
+  font-size: 26px;
+  margin-bottom: 4px;
+}
+
+.seller-logo p {
+  font-size: 14px;
+  color: #cbd5e1;
+  margin-bottom: 28px;
+}
+
+.seller-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.seller-link {
+  color: #d1d5db;
+  padding: 12px 14px;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.seller-link:hover {
+  background: #1f2937;
+  color: white;
+}
+
+.active-link {
+  background: #2563eb;
+  color: white;
+}
+
+.seller-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.seller-navbar {
+  background: white;
+  padding: 18px 24px;
+  border-bottom: 1px solid #e5e7eb;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.seller-navbar h3 {
+  font-size: 22px;
+  margin-bottom: 4px;
+}
+
+.seller-navbar p {
+  color: #6b7280;
+  font-size: 14px;
+}
+
+.seller-avatar {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: #2563eb;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.seller-content {
+  padding: 24px;
+}
+
+.page-wrap {
+  width: 100%;
+}
+
+.page-header {
+  margin-bottom: 24px;
+}
+
+.page-header h1 {
+  font-size: 28px;
+  margin-bottom: 6px;
+}
+
+.page-header p {
+  color: #6b7280;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  margin-bottom: 24px;
+}
+
+.stat-card {
+  background: white;
+  border-radius: 16px;
+  padding: 22px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+}
+
+.stat-card p {
+  color: #6b7280;
+  margin-bottom: 10px;
+}
+
+.stat-card h2 {
+  font-size: 28px;
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 18px;
+}
+
+.dashboard-card,
+.form-card,
+.table-card {
+  background: white;
+  border-radius: 16px;
+  padding: 22px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+}
+
+.seller-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+}
+
+.seller-form input,
+.seller-form textarea {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  outline: none;
+}
+
+.primary-btn {
+  width: fit-content;
+  padding: 12px 22px;
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.primary-btn:hover {
+  background: #1d4ed8;
+}
+
+.seller-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.seller-table th,
+.seller-table td {
+  padding: 14px;
+  text-align: left;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.table-btn {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 8px;
+  background: #2563eb;
+  color: white;
+  margin-right: 8px;
+  cursor: pointer;
+}
+
+.danger-btn {
+  background: #dc2626;
+}
+
+.status-badge {
+  padding: 8px 12px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.status-badge.pending {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.status-badge.shipped {
+  background: #dbeafe;
+  color: #1d4ed8;
+}
+
+.status-badge.delivered {
+  background: #dcfce7;
+  color: #166534;
+}
+
+@media (max-width: 1024px) {
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .seller-app {
+    flex-direction: column;
+  }
+
+  .seller-sidebar {
+    width: 100%;
+    min-height: auto;
+    position: relative;
+  }
+
+  .seller-navbar {
+    padding: 16px;
+  }
+
+  .seller-content {
+    padding: 16px;
+  }
+
+  .stats-grid,
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .seller-table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}
